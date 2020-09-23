@@ -43,6 +43,13 @@ CartesianPoint CartesianPoint::operator+(const CartesianPoint& other_point) cons
 	return tempPoint;
 }
 
+CartesianPoint& CartesianPoint::operator=(const CartesianPoint& other_point)
+{
+	SetX(other_point.GetX());
+	SetY(other_point.GetY());
+	return *this;
+}
+
 std::ostream& operator<<(std::ostream& out, const CartesianPoint& point)
 {
 	out << point.ToString();

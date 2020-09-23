@@ -21,6 +21,8 @@ public:
 	bool operator==(const CartesianPoint& other_point) const;
 	CartesianPoint operator+(const CartesianPoint& other_point) const;
 
+	CartesianPoint& operator=(const CartesianPoint& other_point);
+
 	// Friend Overloads
 	friend std::ostream& operator<<(std::ostream& out, const CartesianPoint& point);
 	friend std::istream& operator>>(std::istream& in, CartesianPoint& point);
