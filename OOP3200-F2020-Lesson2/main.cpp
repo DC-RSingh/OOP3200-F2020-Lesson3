@@ -28,9 +28,6 @@ int main()
 
 	int inputX; // temporary input variable for x
 	int inputY; // temporary input variable for y
-	
-	// to store the distance between two points
-	double distance;
 
 	try
 	{
@@ -51,7 +48,8 @@ int main()
 
 		// Processing
 		// determine the distance between the two points
-		distance = origin.GetDistanceTo(destination);
+		// distance = origin.GetDistanceTo(destination);
+		double distance = origin - destination;
 
 		// Output 
 		// Show the points and the distance
