@@ -7,14 +7,19 @@ class CartesianPoint
 {
 public:
 
-	CartesianPoint(int x = 1, int y = 1);
+	CartesianPoint(const int x = 1, const int y = 1);
 
 	
 	~CartesianPoint();
 
+	/* Copy Constructor */
+	CartesianPoint(const CartesianPoint& point2);
+	
 	// Operator Overloads
 
 	double operator-(const CartesianPoint& point_to) const;
+	bool operator==(const CartesianPoint& other_point) const;
+	CartesianPoint operator+(const CartesianPoint& other_point) const;
 	
 	// --------------------------------------------------------------------------------
 	/* Accessors: Used to query the state of the object
